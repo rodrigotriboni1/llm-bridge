@@ -1,0 +1,35 @@
+[project]
+name = "llm-bridge"
+version = "0.1.0"
+description = "Governed, multi-provider LLM gateway with automatic failover (GPT, Claude, Kimi, DeepSeek)."
+readme = "../README.md"
+requires-python = ">=3.11"
+license = { text = "AGPL-3.0-or-later" }
+
+dependencies = [
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+engine = ["litellm>=1.44"]
+dev = ["pytest>=8.2", "httpx>=0.27", "ruff>=0.6", "mypy>=1.11"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["llm_bridge"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

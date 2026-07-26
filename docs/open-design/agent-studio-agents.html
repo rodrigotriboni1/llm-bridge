@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agents — Agent Studio</title>
+  <link rel="stylesheet" href="./agent-studio-system.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" data-od-id="sidebar">
+      <div class="sidebar-brand" data-od-id="sidebar-brand">
+        <div class="brand-mark">AS</div>
+        <div class="brand-text">
+          <div class="brand-name">Agent Studio</div>
+          <div class="brand-tag">governed · MCP-native</div>
+        </div>
+      </div>
+
+      <div class="sidebar-new" data-od-id="sidebar-new-agent">
+        <a href="./agent-studio-agent-editor.html" class="btn btn-primary w-full">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          New agent
+        </a>
+      </div>
+
+      <nav data-od-id="sidebar-nav">
+        <div class="sidebar-section">
+          <div class="sidebar-label">Overview</div>
+          <a href="./agent-studio-dashboard.html" class="nav-link" data-od-id="nav-dashboard">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            Dashboard
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Build</div>
+          <a href="./agent-studio-agents.html" class="nav-link active" data-od-id="nav-agents">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+            Agents
+            <span class="nav-badge">3</span>
+          </a>
+          <a href="./agent-studio-workflows.html" class="nav-link" data-od-id="nav-workflows">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+            Workflows
+          </a>
+          <a href="./agent-studio-chat.html" class="nav-link" data-od-id="nav-chat">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            Chat
+          </a>
+          <a href="#" class="nav-link" data-od-id="nav-history">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            History
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Configure</div>
+          <a href="./agent-studio-settings.html" class="nav-link" data-od-id="nav-settings">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            Settings
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer" data-od-id="sidebar-footer">
+        <select class="tenant-select" aria-label="Tenant">
+          <option>default</option>
+          <option>acme</option>
+          <option>globex</option>
+        </select>
+        <div class="user-row">
+          <div class="user-avatar">FT</div>
+          <div>
+            <div class="user-name">ftriboni</div>
+            <div class="user-role">Pro workspace</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page">
+        <header class="page-header" data-od-id="page-header">
+          <div>
+            <h1 class="page-title">Agents</h1>
+            <p class="page-desc">Create and manage your governed, MCP-native agents.</p>
+          </div>
+          <div class="page-actions">
+            <a href="./agent-studio-agent-editor.html" class="btn btn-primary" data-od-id="btn-new-agent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+              New Agent
+            </a>
+          </div>
+        </header>
+
+        <section data-od-id="agents-grid">
+          <div class="columns-3">
+            <article class="card" data-od-id="agent-card-refund">
+              <div class="card-body">
+                <div class="flex items-start justify-between gap-3 mb-3">
+                  <div class="flex items-center gap-3">
+                    <div class="stat-icon" style="width: 40px; height: 40px;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">Refund Specialist</div>
+                      <div class="text-sm text-muted">Handles refund requests with policy guardrails.</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-published">published</span>
+                </div>
+
+                <div class="text-sm text-muted mb-4" style="display: grid; gap: 6px;">
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Model</span>
+                    <span class="font-mono text-fg">gpt-4o-mini</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Version</span>
+                    <span class="font-mono text-fg">v3</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Tools</span>
+                    <span class="text-fg">lookup_order, process_refund</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <a href="./agent-studio-agent-editor.html" class="btn btn-secondary btn-sm">Edit</a>
+                  <a href="./agent-studio-run-panel.html" class="btn btn-ghost btn-sm">Run</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-od-id="agent-card-triage">
+              <div class="card-body">
+                <div class="flex items-start justify-between gap-3 mb-3">
+                  <div class="flex items-center gap-3">
+                    <div class="stat-icon" style="width: 40px; height: 40px;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">Triage Agent</div>
+                      <div class="text-sm text-muted">Classifies incoming tickets and routes them.</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-published">published</span>
+                </div>
+
+                <div class="text-sm text-muted mb-4" style="display: grid; gap: 6px;">
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Model</span>
+                    <span class="font-mono text-fg">claude-3-5-sonnet</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Version</span>
+                    <span class="font-mono text-fg">v2</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Tools</span>
+                    <span class="text-fg">classify, escalate</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <a href="./agent-studio-agent-editor.html" class="btn btn-secondary btn-sm">Edit</a>
+                  <a href="./agent-studio-run-panel.html" class="btn btn-ghost btn-sm">Run</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="card" data-od-id="agent-card-onboarding">
+              <div class="card-body">
+                <div class="flex items-start justify-between gap-3 mb-3">
+                  <div class="flex items-center gap-3">
+                    <div class="stat-icon" style="width: 40px; height: 40px;">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+                    </div>
+                    <div>
+                      <div class="font-semibold">Onboarding Guide</div>
+                      <div class="text-sm text-muted">Walks new users through setup and first run.</div>
+                    </div>
+                  </div>
+                  <span class="badge badge-draft">draft</span>
+                </div>
+
+                <div class="text-sm text-muted mb-4" style="display: grid; gap: 6px;">
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Model</span>
+                    <span class="font-mono text-fg">gpt-4o-mini</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Version</span>
+                    <span class="font-mono text-fg">v1</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span style="width: 60px;">Tools</span>
+                    <span class="text-fg">none</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <a href="./agent-studio-agent-editor.html" class="btn btn-secondary btn-sm">Edit</a>
+                  <a href="./agent-studio-run-panel.html" class="btn btn-ghost btn-sm">Run</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

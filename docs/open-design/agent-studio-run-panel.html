@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Run Agent — Agent Studio</title>
+  <link rel="stylesheet" href="./agent-studio-system.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" data-od-id="sidebar">
+      <div class="sidebar-brand" data-od-id="sidebar-brand">
+        <div class="brand-mark">AS</div>
+        <div class="brand-text">
+          <div class="brand-name">Agent Studio</div>
+          <div class="brand-tag">governed · MCP-native</div>
+        </div>
+      </div>
+
+      <div class="sidebar-new" data-od-id="sidebar-new-agent">
+        <a href="./agent-studio-agent-editor.html" class="btn btn-primary w-full">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
+          New agent
+        </a>
+      </div>
+
+      <nav data-od-id="sidebar-nav">
+        <div class="sidebar-section">
+          <div class="sidebar-label">Overview</div>
+          <a href="./agent-studio-dashboard.html" class="nav-link" data-od-id="nav-dashboard">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            Dashboard
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Build</div>
+          <a href="./agent-studio-agents.html" class="nav-link" data-od-id="nav-agents">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+            Agents
+            <span class="nav-badge">3</span>
+          </a>
+          <a href="./agent-studio-workflows.html" class="nav-link" data-od-id="nav-workflows">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+            Workflows
+          </a>
+          <a href="./agent-studio-chat.html" class="nav-link" data-od-id="nav-chat">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+            Chat
+          </a>
+          <a href="#" class="nav-link" data-od-id="nav-history">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            History
+          </a>
+        </div>
+
+        <div class="sidebar-section">
+          <div class="sidebar-label">Configure</div>
+          <a href="./agent-studio-settings.html" class="nav-link" data-od-id="nav-settings">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+            Settings
+          </a>
+        </div>
+      </nav>
+
+      <div class="sidebar-footer" data-od-id="sidebar-footer">
+        <select class="tenant-select" aria-label="Tenant">
+          <option>default</option>
+          <option>acme</option>
+          <option>globex</option>
+        </select>
+        <div class="user-row">
+          <div class="user-avatar">FT</div>
+          <div>
+            <div class="user-name">ftriboni</div>
+            <div class="user-role">Pro workspace</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="page" style="max-width: 880px;">
+        <div class="flex items-center gap-3 mb-6" data-od-id="run-header">
+          <a href="./agent-studio-agents.html" class="btn btn-ghost btn-icon" aria-label="Back">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </a>
+          <div>
+            <h1 class="page-title">Run: Refund Specialist</h1>
+            <p class="page-desc">Send a message and see the governed result.</p>
+          </div>
+        </div>
+
+        <section class="card mb-4" data-od-id="run-input">
+          <div class="card-body">
+            <h2 class="section-title">Message</h2>
+            <textarea class="textarea" rows="4" placeholder="What is your refund policy?">I need a refund for order #4821. It arrived damaged.</textarea>
+            <div class="mt-3">
+              <button class="btn btn-primary" data-od-id="btn-run">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 2-7 20-4-9-9-4 20-7z"/><path d="m22 2-7 20-4-9-9-4 20-7z"/></svg>
+                Send (⌘↵)
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section data-od-id="run-results">
+          <div class="card mb-4" data-od-id="result-answer">
+            <div class="card-body">
+              <h2 class="section-title">Answer</h2>
+              <p class="text-sm leading-relaxed">Order #4821 is eligible for a full refund within the 30-day window. The item shows as damaged in transit. Refund has been processed; credit will appear in 3–5 business days.</p>
+            </div>
+          </div>
+
+          <div class="columns-2">
+            <div class="card" data-od-id="result-citations">
+              <div class="card-body">
+                <h2 class="section-title">Citations</h2>
+                <div class="card-surface" style="border-radius: var(--radius-sm);">
+                  <div class="card-body" style="padding: 12px;">
+                    <div class="flex items-center justify-between mb-1">
+                      <span class="font-mono text-xs text-muted">order_policy_q3_2024</span>
+                      <span class="badge badge-default">92%</span>
+                    </div>
+                    <p class="text-sm text-muted">Items damaged in transit are eligible for full refund within 30 days of delivery.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card" data-od-id="result-tool-calls">
+              <div class="card-body">
+                <h2 class="section-title">Tool calls</h2>
+                <div class="space-y-2">
+                  <div class="card-surface" style="border-radius: var(--radius-sm);">
+                    <div class="card-body" style="padding: 12px;">
+                      <span class="font-mono text-sm font-semibold">lookup_order</span>
+                      <pre class="text-xs text-muted mt-1" style="overflow: auto;">{
+  "order_id": "4821",
+  "status": "delivered",
+  "damage_reported": true
+}</pre>
+                    </div>
+                  </div>
+                  <div class="card-surface" style="border-radius: var(--radius-sm);">
+                    <div class="card-body" style="padding: 12px;">
+                      <span class="font-mono text-sm font-semibold">process_refund</span>
+                      <pre class="text-xs text-muted mt-1" style="overflow: auto;">{
+  "order_id": "4821",
+  "amount": 129.99,
+  "method": "original_payment"
+}</pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card mt-4" data-od-id="result-denials">
+            <div class="card-body">
+              <h2 class="section-title">Governance denials</h2>
+              <p class="text-sm text-muted mb-3">These tools/models were denied by the manifest allow-list at runtime.</p>
+              <div class="flex gap-2" style="flex-wrap: wrap;">
+                <span class="badge badge-danger font-mono">delete_order</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
